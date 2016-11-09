@@ -3,4 +3,5 @@ class ProductsController < ApplicationController
   @products = Product.all
   render 'products.html.erb'
   end
+
 end

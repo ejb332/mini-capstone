@@ -2,10 +2,13 @@
 <h1>Yes, we're a cheese shoppe.</h1>
 <h2>Here's what we have in stock today:</h2>
 <% @products.each do |product| %>
-  <h3><%= product.name %></h3>
-  <p>Only $<%= product.price %>!</p>
-  <p><%= product.image %></p>
-  <p><%= product.description %></p>
-  <hr>
+  <table class="table table-hover">
+  <tr>
+    <th><%= product.name %></th>
+    <td>Only $<%= product.price %>!</td>
+    <td><img src= <%= product.image %> class=img-circle ></td>
+    <td><%= product.description %></td>
+  </tr>
+  </table>
 <%end%>
 </div>

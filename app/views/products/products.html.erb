@@ -1,0 +1,8 @@
+<h1>Yes, we're a cheese shoppe.</h1>
+<h2>Here's what we have in stock today:</h2>
+<% @products.each do |product| %>
+  <h3><%= product.name %></h3>
+  <p>Only $<%= product.price %>!</p>
+  <p><%= product.image %></p>
+  <p><%= product.description %></p>
+<%end%>

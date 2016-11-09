@@ -1,12 +1,21 @@
-<div id="main-bg">
-<h1>Yes, we're a cheese shoppe.</h1>
-<h2>Here's what we have in stock today:</h2>
+<div id="main">
+  <i class="fa fa-cutlery" aria-hidden="true"></i>
+  <h1>Yes, we're a cheese shoppe.</h1>
+</div>
+<hr>
+<br>
+<div>
+  <h2>Here's what we have in stock today</h2>
+</div>
+<br>
+<br>
+<div class="container">
 <% @products.each do |product| %>
   <table class="table table-hover">
   <tr>
     <th><%= product.name %></th>
     <td>Only $<%= product.price %>!</td>
-    <td><img src= <%= product.image %> class=img-circle ></td>
+    <td><img src= <%= product.image %> class="img-circle img-responsive"></td>
     <td><%= product.description %></td>
   </tr>
   </table>

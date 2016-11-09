@@ -1,3 +1,4 @@
+<div id="main-bg">
 <h1>Yes, we're a cheese shoppe.</h1>
 <h2>Here's what we have in stock today:</h2>
 <% @products.each do |product| %>
@@ -5,4 +6,6 @@
   <p>Only $<%= product.price %>!</p>
   <p><%= product.image %></p>
   <p><%= product.description %></p>
+  <hr>
 <%end%>
+</div>

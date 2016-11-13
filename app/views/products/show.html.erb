@@ -1,0 +1,10 @@
+<table class="table table-hover">
+<tr>
+  <th><%= @product.name %></th>
+  <td>Only $<%= @product.price %>!</td>
+  <td><img src= <%= @product.image %> class="img-circle img-responsive"></td>
+  <td><%= @product.description %></td>
+</tr>
+</table>
+<a href="/products/<%= @product.id %>/edit">Edit</a>
+<a href="/products">Home</a>

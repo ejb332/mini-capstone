@@ -13,7 +13,7 @@
 <% @products.each do |product| %>
   <table class="table table-hover">
   <tr>
-    <th><%= product.name %></th>
+    <th><a href='/products/<%= product.id %>'><%= product.name %></a></th>
     <td>Only $<%= product.price %>!</td>
     <td><img src= <%= product.image %> class="img-circle img-responsive"></td>
     <td><%= product.description %></td>

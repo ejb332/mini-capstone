@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Edit cheese</h1>
 <%= form_tag "/products/#{@product.id}", method: :patch do %>
   <div class="form-group">
@@ -21,3 +22,4 @@
 <%= form_tag "/products", method: :get do %>
   <%= submit_tag "Cancel", class: 'btn btn-danger' %>
 <% end %>
+</div>

@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
       description: params['description']
       )
     cheese.save
+    flash[:success] = "Product added successfully!"
     redirect_to "/products"
   end
 
@@ -39,6 +40,7 @@ class ProductsController < ApplicationController
     product.image = params[:image]
     product.description = params[:description]
     product.save
+    flash[:success] = "Product update complete!"
     redirect_to "/products/#{product.id}"
   end
 
@@ -46,6 +48,7 @@ class ProductsController < ApplicationController
     product_id = params[:id]
     product = Product.find_by(id: product_id)
     product.destroy
+    flash[:success] = "Goodbye, out-of-date product"
     redirect_to "/products"
   end
 end

@@ -16,5 +16,8 @@
     <%= label_tag :description %>
     <%= text_field_tag :description, @product.description, class: 'form-control' %>
   </div>
-  <%= submit_tag "Edit cheesy product", class: 'btn btn-default' %>
+  <%= submit_tag "Edit cheesy product", class: 'btn btn-success' %>
+<% end %>
+<%= form_tag "/products", method: :get do %>
+  <%= submit_tag "Cancel", class: 'btn btn-danger' %>
 <% end %>

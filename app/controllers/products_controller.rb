@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
       description: params['description']
       )
     cheese.save
-    render 'create.html.erb'
+    redirect_to "/products"
   end
 
   def edit
@@ -39,10 +39,13 @@ class ProductsController < ApplicationController
     product.image = params[:image]
     product.description = params[:description]
     product.save
-    render 'update.html.erb'
+    redirect_to "/products/#{product.id}"
   end
 
   def destroy
-    render 'destroy.html.erb'
+    product_id = params[:id]
+    product = Product.find_by(id: product_id)
+    product.destroy
+    redirect_to "/products"
   end
 end

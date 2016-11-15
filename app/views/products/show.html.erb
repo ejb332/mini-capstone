@@ -6,5 +6,12 @@
   <td><%= @product.description %></td>
 </tr>
 </table>
-<a href="/products/<%= @product.id %>/edit">Edit</a>
-<a href="/products">Home</a>
+<div class=>
+  <a href="/products/<%= @product.id %>/edit">Edit</a>
+</div>
+<div>
+  <%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
+</div>
+<div>
+  <a href="/products">Back to all products</a>
+</div>

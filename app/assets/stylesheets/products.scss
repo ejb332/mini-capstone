@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+  background-image: url("sos/sos.png");
+}
+
 h1 {
   color: #585747;
   text-align: center;
@@ -16,3 +21,10 @@ hr {
   border: 2px solid green;
 }
 
+.well {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.well img {
+  width: 100%;
+}

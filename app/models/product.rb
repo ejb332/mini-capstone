@@ -1,2 +1,26 @@
 class Product < ApplicationRecord
+
+  def sale_message
+    if price.to_f <= 10
+      return "Discount item!"
+    else
+      return "Everyday value!"
+    end
+  end
+
+  def discount_class_name
+    if sale_message == "Discount item!"
+      return "discount-item"
+    else
+      return ""
+    end
+  end
+
+  def tax
+    price.to_f * 0.09
+  end
+
+  def total
+    price.to_f + tax
+  end
 end

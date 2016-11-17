@@ -21,10 +21,18 @@ hr {
   border: 2px solid green;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .well {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
 .well img {
   width: 100%;
+}
+
+.discount-item {
+  color: red;
 }

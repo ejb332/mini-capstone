@@ -1,18 +1,10 @@
 class Product < ApplicationRecord
 
   def sale_message
-    if price.to_f <= 10
+    if price.to_f < 10
       return "Discount item!"
     else
       return "Everyday value!"
-    end
-  end
-
-  def discount_class_name
-    if sale_message == "Discount item!"
-      return "discount-item"
-    else
-      return ""
     end
   end
 
@@ -23,4 +15,17 @@ class Product < ApplicationRecord
   def total
     price.to_f + tax
   end
+
+  def discounted?
+    if price.to_f < 10
+    end
+  end
+
+  # def discount_class_name
+  #   if sale_message == "Discount item!"
+  #     return "discount-item"
+  #   else
+  #     return ""
+  #   end
+  # end
 end

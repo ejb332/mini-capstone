@@ -1,8 +1,13 @@
 <table class="table table-hover">
 <tr>
   <th><%= @product.name %></th>
-  <td><%= @product.sale_message %></td>
-  <td class="<%= @product.discount_class_name %>">Only <%= number_to_currency(@product.price) %>!</td>
+  <% if @product.discounted? %>
+    <td class="discount-item">Only <%= number_to_currency(@product.price) %>!</td>
+    <td>Discount item!</td>
+  <% else %>
+    <td>Only <%= number_to_currency(@product.price) %>!</td>
+    <td>Everyday value!</td>
+  <% end %>
   <td>Tax: <%= number_to_currency(@product.tax) %></td>
   <td>Total: <%= number_to_currency(@product.total) %></td>
   <td><img src= <%= @product.image %> class="img-circle img-responsive"></td>

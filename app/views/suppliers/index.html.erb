@@ -1,0 +1,6 @@
+<h1>Yep. I'm the index page.</h1>
+<% @suppliers.each do |supplier| %>
+  <h2><%= supplier.name %></h2>
+  <p><%= supplier.email %></p>
+  <p><%= supplier.phone %></p>
+<% end %>

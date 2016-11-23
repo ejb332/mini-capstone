@@ -49,6 +49,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
 <div class="container">
   <i class="fa fa-cutlery" aria-hidden="true"></i>
   <h1>Yes, we're a cheese shoppe.</h1>
@@ -64,7 +65,7 @@
       <% @products.each do |product| %>
         <h2><a href="/products/<%= product.id %>"><%= product.name %></a></h2>
         <p>Only $<%= product.price %>!</p>
-        <div class="well"><img src= <%= product.image %> class="img-circle img-responsive">
+        <div class="well"><img src= <%= product.images.first.url %> class="img-circle img-responsive">
         </div>
         <p><%= product.description %></p>
       <%end%>

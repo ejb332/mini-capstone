@@ -10,8 +10,13 @@
   <% end %>
   <td>Tax: <%= number_to_currency(@product.tax) %></td>
   <td>Total: <%= number_to_currency(@product.total) %></td>
-  <td><img src= <%= @product.image %> class="img-circle img-responsive"></td>
+  <% @product.images.each do |image| %>
+    <img src="<%=  image.url %>" alt="<%= @product.name %>" class="img-circle img-responsive">
+  <% end %>
   <td><%= @product.description %></td>
+</tr>
+<tr>
+  <td>From the fresh farms of <%= @product.supplier.name %></td>
 </tr>
 </table>
 <div class="btn btn-success">

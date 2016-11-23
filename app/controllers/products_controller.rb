@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     sort = params[:sort]
-    @products = Product.order(sort)
+    @products = Product.all.order(sort)
     if sort == "sort_desc"
       @products = Product.order(price: :desc)
     elsif sort == "discount"

@@ -1,4 +1,4 @@
-<h1>Edit cheese</h1>
+<h1>Add cheese</h1>
 <%= form_tag '/products', method: :post do %>
   <div class="form-group">
     <%= label_tag :name %>
@@ -17,7 +17,7 @@
     <%= text_field_tag :description, "", class: 'form-control' %>
   </div>
   <div>
-    <%= submit_tag "Edit cheesy product", class: 'btn btn-success' %>
+    <%= submit_tag "Add cheesy product", class: 'btn btn-success' %>
   </div>
 <% end %>
 <%= form_tag "/products", method: :get do %>

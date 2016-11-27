@@ -1,0 +1,7 @@
+<h1>Order successfully submitted!</h1>
+<h3>Thanks for purchasing <%= @order.quantity %> items.</h3>
+<h4>Order #<%= @order.id %></h4>
+<h4>Subtotal: <%= @order.subtotal %></h4>
+<h4>Tax: <%= @order.tax %></h4>
+<h4>Grand total: <%= @order.total %></h4>
+<p>You'll soon receive an order confirmation at <%= current_user.email %></p>

@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   has_many :images
   belongs_to :user
   has_many :orders
+  has_many :categories, through: :category_products
 
   def sale_message
     if price.to_f < 10

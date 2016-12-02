@@ -67,12 +67,15 @@
   <%= submit_tag "Add To Cart", class: 'btn btn-success' %>
 <% end %>
 </div>
-<div class="btn btn-warning">
-  <a href="/products/<%= @product.id %>/edit">Edit</a>
-</div>
-<div class="btn btn-danger">
-  <%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
-</div>
+<!-- if current_user exists and they're an admin, show the edit/delete buttons -->
+<% if current_user && current_user.admin %>
+  <div class="btn btn-warning">
+    <a href="/products/<%= @product.id %>/edit">Edit</a>
+  </div>
+  <div class="btn btn-danger">
+    <%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
+  </div>
+<% end %>
 <div class="btn btn-info">
   <a href="/products">Back to all products</a>
 </div>

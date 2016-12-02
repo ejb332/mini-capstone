@@ -4,6 +4,7 @@
     <%= carted_product.quantity %>
     <%= carted_product.product.name %>
     At $<%= carted_product.product.price %> each
+    <%= link_to "Remove from cart", "cart/#{carted_product.id}", method: :delete %>
     <br>
   <% end %>
 </h3>

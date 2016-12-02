@@ -55,7 +55,7 @@
   </a>
 </div>
 <h2>Check Out</h2>
-<%= form_tag "/orders", method: :post do %>
+<%= form_tag "/cart", method: :post do %>
   <div class="form-group">
     <%= label_tag :quantity %>
     <%= text_field_tag :quantity, "", class: 'form-control' %>
@@ -64,7 +64,7 @@
     <%= label_tag :product_id %>
     <%= text_field_tag :product_id, @product.id, class: 'form-control' %>
   </div>
-  <%= submit_tag "Buy Now!", class: 'btn btn-success' %>
+  <%= submit_tag "Add To Cart", class: 'btn btn-success' %>
 <% end %>
 </div>
 <div class="btn btn-warning">

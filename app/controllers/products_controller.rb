@@ -10,6 +10,9 @@ class ProductsController < ApplicationController
       @products = Product.all.sample(1)
     elsif sort == "search_sort"
       @products = Product.order(:name)
+    elsif params[:category_name] != nil
+      selected_category = Category.find_by(name: params[:category_name])
+      @products = selected_category.products
     end
     render "index.html.erb"
   end
@@ -33,7 +36,7 @@ class ProductsController < ApplicationController
       )
     cheese.save
     flash[:success] = "Product added successfully!"
-    redirect_to "/products"
+    redirect_to "/checkout"
   end
 
   def edit

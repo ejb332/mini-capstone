@@ -1,0 +1,11 @@
+<h1>In Cart</h1>
+<h3>
+  <% @carted_products.each do |carted_product| %>
+    <%= carted_product.quantity %>
+    <%= carted_product.product.name %>
+    At $<%= carted_product.product.price %> each
+    <br>
+  <% end %>
+</h3>
+
+<a class="btn btn-success" href="" role="button">Buy now!</a>

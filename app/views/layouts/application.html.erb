@@ -29,8 +29,11 @@
           <ul class="dropdown-menu">
             <li><a href="/products?sort=price">Price (low to high)</a></li>
             <li><a href="/products?sort=sort_desc">Price (high to low)</a></li>
-            <li role="separator" class="divider"></li>
             <li><a href="/products?sort=name">Name</a></li>
+            <li role="separator" class="divider"></li>
+            <% Category.all.each do |category| %>
+              <li><a href="/products?category_name=<%= category.name %>"><%= category.name %> only</a></li>
+            <% end %>
           </ul>
         </li>
       </ul>
@@ -57,7 +60,7 @@
               <li><a href="/logout">Sign out</a></li>
             <% end %>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="/cart">View cart</a></li>
           </ul>
         </li>
       </ul>

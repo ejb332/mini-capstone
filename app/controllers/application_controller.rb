@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authenticate_user!
-    redirect_to '/login' unless current_user
+    redirect_to "/login" unless current_user
+  end
+
+  def authenticate_admin!
+    redirect_to "/products" unless current_user && current_user.admin
+    return
   end
 end

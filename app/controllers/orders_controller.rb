@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_admin!
+
   def create
     # order = Order.new(
     #   order.quantity = params["quantity"],

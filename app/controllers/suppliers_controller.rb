@@ -1,4 +1,6 @@
 class SuppliersController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
     @suppliers = Supplier.all
     render "index.html.erb"

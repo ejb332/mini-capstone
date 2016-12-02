@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
       )
     order.save
 
-    carted_products.update_all(status: "purchased", order_id: order.id)
+    @carted_products.update_all(status: "purchased", order_id: order.id)
     flash[:success] = "Your order was created successfully!"
     redirect_to "/orders/#{order.id}"
   end

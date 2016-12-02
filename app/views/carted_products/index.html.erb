@@ -9,4 +9,6 @@
   <% end %>
 </h3>
 
-<a class="btn btn-success" href="" role="button">Buy now!</a>
+<%= form_tag "/orders", method: :post do %>
+  <%= submit_tag "Buy now!", class: "btn btn-success" %>
+<% end %>
